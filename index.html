@@ -353,6 +353,8 @@
             /*background: linear-gradient(135deg, #8b5cf6 0%, #a855f7 30%, #7c3aed 70%, #00d4ff 100%);*/
             text-align: center;
             position: relative;
+            display: grid;
+            justify-content: center;
         }
 
         .stats-section::before {
@@ -375,7 +377,7 @@
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             gap: 3rem;
-            max-width: 50vw;
+            max-width: 60vw;
             margin: 0 auto;
         }
 
@@ -399,8 +401,6 @@
         }
 
         .stat-icon {
-            width: 100px;
-            height: 100px;
             background: rgba(255, 255, 255, 0.15);
             border: 2px solid rgba(255, 255, 255, 0.3);
             border-radius: 50%;
@@ -409,6 +409,7 @@
             justify-content: center;
             font-size: 2.5rem;
             backdrop-filter: blur(10px);
+            margin: 1rem;
         }
 
         .stat-number {
@@ -421,7 +422,7 @@
         .stat-label {
             color: rgba(255, 255, 255, 0.9);
             font-weight: 600;
-            font-size: 1.1rem;
+            font-size: 1.5rem;
             text-shadow: 0 1px 5px rgba(0, 0, 0, 0.3);
         }
 
@@ -647,21 +648,27 @@
         <div class="container-wide">
             <div class="stats-grid">
                 <div class="stat-item">
-                    <div class="stat-icon">👥</div>
-                    <div class="stat-number">30+</div>
                     <div class="stat-label">Community-Driven</div>
+                    <div class="stat-icon">
+                        <img src="assets/images/landing/bottom_icon_1.webp">
+                    </div>
+                    <div class="stat-number">30+</div>
                 </div>
 
                 <div class="stat-item">
-                    <div class="stat-icon">💎</div>
-                    <div class="stat-number">32+</div>
                     <div class="stat-label">Trading Innovation</div>
+                    <div class="stat-icon">
+                        <img src="assets/images/landing/bottom_icon_2.webp">
+                    </div>
+                    <div class="stat-number">32+</div>
                 </div>
 
                 <div class="stat-item">
-                    <div class="stat-icon">🏆</div>
-                    <div class="stat-number">10K</div>
                     <div class="stat-label">Gamified Training</div>
+                    <div class="stat-icon">
+                        <img src="assets/images/landing/bottom_icon_3.webp">
+                    </div>
+                    <div class="stat-number">10K</div>
                 </div>
             </div>
         </div>
