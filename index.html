@@ -29,11 +29,7 @@
             position: fixed;
             top: 0;
             width: 100%;
-            background: rgba(10, 10, 10, 0.95);
-            backdrop-filter: blur(10px);
             z-index: 1000;
-            padding: 1rem 2rem;
-            transition: all 0.3s ease;
         }
 
         .nav {
@@ -44,13 +40,9 @@
         }
 
         .logo {
-            font-size: 1.5rem;
-            font-weight: 700;
-            background-image: url("assets/images/landing/header_logo.webp");
-            /*background: linear-gradient(135deg, #00d4ff, #9333ea);*/
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
-            background-clip: text;
+            height: 7vh;
         }
 
         .nav-link {
@@ -479,11 +471,11 @@
                 grid-template-columns: 1fr;
                 gap: 3rem;
             }
-            
+
             .protection-grid {
                 grid-template-columns: 1fr;
             }
-            
+
             .features-grid {
                 grid-template-columns: 1fr;
             }
@@ -494,7 +486,9 @@
     <!-- Header -->
     <header class="header">
         <nav class="nav">
-            <div class="logo">CHRONOS</div>
+            <div class="logo">
+                <img src="assets/image/landing/header_logo.webp"/>
+            </div>
             <a href="#contact" class="nav-link">Contact Us</a>
         </nav>
     </header>
@@ -533,20 +527,20 @@
                 <p class="features-pretitle">Real Trading, Real Rewards</p>
                 <p class="features-subtitle">Simple. Bold</p>
             </div>
-            
+
             <div class="features-grid">
                 <div class="feature-card">
                     <div class="feature-icon">🎁</div>
                     <h3>Rewards</h3>
                     <p>Earn highly unlocked on-chain real rewards - from bounty prizes to exclusive perks. Finally, a DEX that rewards your activity instead of just taking fees.</p>
                 </div>
-                
+
                 <div class="feature-card">
                     <div class="feature-icon">🎮</div>
                     <h3>Gamification</h3>
                     <p>Beyond traditional trading lies real connections - battle new challenges with your crew, and tap deeper to swing with systems that excite from social gaming to competitive trading adventures.</p>
                 </div>
-                
+
                 <div class="feature-card">
                     <div class="feature-icon">👥</div>
                     <h3>Social Community</h3>
@@ -562,7 +556,7 @@
             <div class="speed-content">
                 <h2 class="section-title">Unmatched Speed & Execution</h2>
                 <p class="section-subtitle">Milliseconds make Millionaires</p>
-                
+
                 <div class="speed-metrics">
                     <div class="metric">
                         <div class="metric-value">&lt;1ms</div>
@@ -586,33 +580,33 @@
         <div class="container">
             <h2 class="section-title">Decentralized by Design</h2>
             <p class="section-subtitle">We build on a custodial-free platform where security and ownership come first. Your assets remain 100% on-chain across multiple blockchains through our non-custodial architecture.</p>
-            
+
             <div class="protection-grid">
                 <div class="protection-item">
                     <h3>Public Founders with Professional Sport Careers</h3>
                     <p>Real names, real accountability</p>
                 </div>
-                
+
                 <div class="protection-item">
                     <h3>Non-Custodial</h3>
                     <p>True peace of mind in a space full of uncertainty</p>
                 </div>
-                
+
                 <div class="protection-item">
                     <h3>Authentic Discussions with Community Leaders</h3>
                     <p>Consistently admiring, unwavering, and evolving</p>
                 </div>
-                
+
                 <div class="protection-item">
                     <h3>Custom RPC Infrastructure</h3>
                     <p>1x-ms transaction latency</p>
                 </div>
-                
+
                 <div class="protection-item">
                     <h3>AI-Powered Protection</h3>
                     <p>Even on MEV protection, fraud detection, developer tracking, and automated security analysis</p>
                 </div>
-                
+
                 <div class="protection-item">
                     <h3>Clean Design, Instant Action</h3>
                     <p>Dark, structured interface meets our top integration - buy instantly, confirm immediately, trade without friction</p>
@@ -630,13 +624,13 @@
                     <div class="stat-number">30+</div>
                     <div class="stat-label">Community-Driven</div>
                 </div>
-                
+
                 <div class="stat-item">
                     <div class="stat-icon">💎</div>
                     <div class="stat-number">32+</div>
                     <div class="stat-label">Trading Innovation</div>
                 </div>
-                
+
                 <div class="stat-item">
                     <div class="stat-icon">🏆</div>
                     <div class="stat-number">10K</div>
