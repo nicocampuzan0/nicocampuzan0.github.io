@@ -166,7 +166,308 @@
             font-size: 1.2rem;
         }
 
-        /* Features Section */
+        /* Tabbed Features Section */
+        .tabbed-features {
+            padding: 6rem 2rem;
+            background: linear-gradient(180deg, #0f172a 0%, #1a1a2e 100%);
+        }
+
+        .tabs-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .tabs-nav {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 4rem;
+            position: relative;
+        }
+
+        .tab-button {
+            background: none;
+            border: none;
+            color: #666;
+            font-size: 1.1rem;
+            font-weight: 500;
+            padding: 1rem 2rem;
+            cursor: pointer;
+            position: relative;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .tab-button::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 0;
+            height: 2px;
+            background: linear-gradient(135deg, #7c3aed, #00d4ff);
+            transition: width 0.3s ease;
+        }
+
+        .tab-button.active {
+            color: #ffffff;
+        }
+
+        .tab-button.active::after {
+            width: 80%;
+        }
+
+        .tab-button:hover:not(.active) {
+            color: #a0a0a0;
+        }
+
+        .tab-content {
+            display: none;
+            animation: fadeIn 0.5s ease-in-out;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
+        /* Elite Speed Tab Content */
+        .elite-speed-content {
+            text-align: center;
+        }
+
+        .elite-speed-content .speed-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            background: linear-gradient(135deg, #ffffff, #00d4ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .elite-speed-content .speed-subtitle {
+            color: #a0a0a0;
+            margin-bottom: 3rem;
+            font-size: 1.1rem;
+        }
+
+        .speed-metrics-tabs {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .metric-tab {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 16px;
+            padding: 2rem;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .metric-tab:hover {
+            border-color: rgba(0, 212, 255, 0.3);
+            transform: translateY(-5px);
+        }
+
+        .metric-value-tab {
+            font-size: 2.5rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, #00d4ff, #9333ea);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 0.5rem;
+        }
+
+        .metric-label-tab {
+            color: #a0a0a0;
+            font-size: 0.9rem;
+        }
+
+        /* REAL Rewards Tab Content */
+        .rewards-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .rewards-text {
+            padding-left: 2rem;
+        }
+
+        .rewards-text h3 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            background: linear-gradient(135deg, #ffffff, #7c3aed);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .rewards-text p {
+            color: #a0a0a0;
+            line-height: 1.7;
+            margin-bottom: 2rem;
+            font-size: 1.1rem;
+        }
+
+        .rewards-features {
+            list-style: none;
+        }
+
+        .rewards-features li {
+            color: #ffffff;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .rewards-features li::before {
+            content: '✦';
+            color: #7c3aed;
+            font-weight: bold;
+        }
+
+        .podium-container {
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+            height: 300px;
+            gap: 1rem;
+        }
+
+        .podium-tier {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .podium-step {
+            background: linear-gradient(135deg, #7c3aed, #a855f7);
+            border-radius: 8px 8px 0 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            position: relative;
+        }
+
+        .podium-step.first {
+            width: 80px;
+            height: 120px;
+            background: linear-gradient(135deg, #00d4ff, #0ea5e9);
+        }
+
+        .podium-step.second {
+            width: 80px;
+            height: 100px;
+        }
+
+        .podium-step.third {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, #94a3b8, #64748b);
+        }
+
+        .tier-label {
+            color: #ffffff;
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+
+        /* Gamification Tab Content */
+        .gamification-content {
+            text-align: center;
+            padding: 3rem 0;
+        }
+
+        .gamification-content h3 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            background: linear-gradient(135deg, #ffffff, #7c3aed);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .gamification-content p {
+            color: #a0a0a0;
+            font-size: 1.1rem;
+            margin-bottom: 3rem;
+        }
+
+        .badges-preview {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 2rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .badge {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 16px;
+            padding: 2rem 1rem;
+            transition: all 0.3s ease;
+        }
+
+        .badge:hover {
+            border-color: rgba(124, 58, 237, 0.5);
+            transform: translateY(-5px);
+        }
+
+        .badge-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .badge-name {
+            color: #ffffff;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .badge-desc {
+            color: #a0a0a0;
+            font-size: 0.8rem;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .rewards-content {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+            
+            .rewards-text {
+                padding-left: 0;
+            }
+            
+            .tabs-nav {
+                flex-direction: column;
+                gap: 1rem;
+            }
+            
+            .tab-button {
+                padding: 0.5rem 1rem;
+            }
+        }
         .features {
             padding: 6rem 2rem;
             background: linear-gradient(180deg, #0f172a 0%, #1a1a2e 100%);
@@ -541,7 +842,103 @@
         </div>
     </section>
 
-    <!-- Features Section -->
+    <!-- Tabbed Features Section -->
+    <section class="tabbed-features">
+        <div class="tabs-container">
+            <nav class="tabs-nav">
+                <button class="tab-button active" data-tab="elite-speed">Elite TX Speeds</button>
+                <button class="tab-button" data-tab="real-rewards">REAL Rewards</button>
+                <button class="tab-button" data-tab="gamification">Gamification</button>
+            </nav>
+
+            <!-- Elite Speed Tab Content -->
+            <div class="tab-content active" id="elite-speed">
+                <div class="elite-speed-content">
+                    <h2 class="speed-title">Unmatched Speed & Execution</h2>
+                    <p class="speed-subtitle">Milliseconds make Millionaires</p>
+                    
+                    <div class="speed-metrics-tabs">
+                        <div class="metric-tab">
+                            <div class="metric-value-tab">&lt;1ms</div>
+                            <div class="metric-label-tab">Transaction Latency</div>
+                        </div>
+                        <div class="metric-tab">
+                            <div class="metric-value-tab">99.9%</div>
+                            <div class="metric-label-tab">Uptime</div>
+                        </div>
+                        <div class="metric-tab">
+                            <div class="metric-value-tab">24/7</div>
+                            <div class="metric-label-tab">Market Access</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- REAL Rewards Tab Content -->
+            <div class="tab-content" id="real-rewards">
+                <div class="rewards-content">
+                    <div class="rewards-text">
+                        <h3>Earn While You Trade</h3>
+                        <p>Experience a revolutionary reward system where every trade, every interaction, and every milestone unlocks real value. Our multi-tier system ensures that active traders are recognized and rewarded.</p>
+                        
+                        <ul class="rewards-features">
+                            <li>Progressive reward multipliers</li>
+                            <li>Exclusive access to premium features</li>
+                            <li>Community recognition badges</li>
+                            <li>Monthly bonus distributions</li>
+                            <li>VIP trading tournaments</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="podium-container">
+                        <div class="podium-tier">
+                            <div class="tier-label">Silver</div>
+                            <div class="podium-step third">3</div>
+                        </div>
+                        <div class="podium-tier">
+                            <div class="tier-label">Gold</div>
+                            <div class="podium-step first">1</div>
+                        </div>
+                        <div class="podium-tier">
+                            <div class="tier-label">Platinum</div>
+                            <div class="podium-step second">2</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Gamification Tab Content -->
+            <div class="tab-content" id="gamification">
+                <div class="gamification-content">
+                    <h3>Level Up Your Trading</h3>
+                    <p>Unlock achievements, earn badges, and compete with traders worldwide in our gamified ecosystem.</p>
+                    
+                    <div class="badges-preview">
+                        <div class="badge">
+                            <div class="badge-icon">🏆</div>
+                            <div class="badge-name">First Blood</div>
+                            <div class="badge-desc">Complete your first trade</div>
+                        </div>
+                        <div class="badge">
+                            <div class="badge-icon">⚡</div>
+                            <div class="badge-name">Speed Demon</div>
+                            <div class="badge-desc">Execute 10 trades in under 60 seconds</div>
+                        </div>
+                        <div class="badge">
+                            <div class="badge-icon">💎</div>
+                            <div class="badge-name">Diamond Hands</div>
+                            <div class="badge-desc">Hold a position for 30+ days</div>
+                        </div>
+                        <div class="badge">
+                            <div class="badge-icon">🎯</div>
+                            <div class="badge-name">Sniper</div>
+                            <div class="badge-desc">Hit 5 consecutive profitable trades</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
     <section class="features">
         <div class="container">
             <div class="features-header">
@@ -578,26 +975,32 @@
         </div>
     </section>
 
-    <!-- Speed Section -->
-    <section class="speed-section">
+    <!-- Features Section -->
+    <section class="features">
         <div class="container">
-            <div class="speed-content">
-                <h2 class="section-title">Unmatched Speed & Execution</h2>
-                <p class="section-subtitle">Milliseconds make Millionaires</p>
-
-                <div class="speed-metrics">
-                    <div class="metric">
-                        <div class="metric-value">&lt;1ms</div>
-                        <div class="metric-label">Transaction Latency</div>
-                    </div>
-                    <div class="metric">
-                        <div class="metric-value">99.9%</div>
-                        <div class="metric-label">Uptime</div>
-                    </div>
-                    <div class="metric">
-                        <div class="metric-value">24/7</div>
-                        <div class="metric-label">Market Access</div>
-                    </div>
+            <div class="features-header">
+                <h2 class="section-title">New Age of DeFi</h2>
+                <p class="features-pretitle">Real Trading, Real Rewards</p>
+                <p class="features-subtitle">Simple. Bold</p>
+            </div>
+            
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🎁</div>
+                    <h3>Rewards</h3>
+                    <p>Earn highly unlocked on-chain real rewards - from bounty prizes to exclusive perks. Finally, a DEX that rewards your activity instead of just taking fees.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">🎮</div>
+                    <h3>Gamification</h3>
+                    <p>Beyond traditional trading lies real connections - battle new challenges with your crew, and tap deeper to swing with systems that excite from social gaming to competitive trading adventures.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">👥</div>
+                    <h3>Social Community</h3>
+                    <p>Building authentic trading communities through competitive matchmaking, team-based battles, and social recognition systems that transform individual trading into collaborative and exciting workouts.</p>
                 </div>
             </div>
         </div>
@@ -727,7 +1130,21 @@
                 observer.observe(el);
             });
 
-            // Header background on scroll
+            // Tab functionality
+            document.querySelectorAll('.tab-button').forEach(button => {
+                button.addEventListener('click', function() {
+                    const targetTab = this.getAttribute('data-tab');
+                    
+                    // Remove active class from all buttons and contents
+                    document.querySelectorAll('.tab-button').forEach(btn => btn.classList.remove('active'));
+                    document.querySelectorAll('.tab-content').forEach(content => content.classList.remove('active'));
+                    
+                    // Add active class to clicked button and corresponding content
+                    this.classList.add('active');
+                    document.getElementById(targetTab).classList.add('active');
+                });
+            });
+	    // Sticky Header
             window.addEventListener('scroll', function() {
                 const header = document.querySelector('.header');
                 if (window.scrollY > 100) {
