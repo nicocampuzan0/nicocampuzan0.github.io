@@ -848,6 +848,12 @@
             justify-items: center;
         }
 
+        @media (max-width: 1040px) {
+             .features-grid {
+             grid-template-columns: 1fr;
+        }
+}
+
         .feature-card {
             background: rgba(255, 255, 255, 0.05);
             border: 1px solid rgba(255, 255, 255, 0.1);
@@ -857,6 +863,7 @@
             backdrop-filter: blur(10px);
             display: grid;
             justify-items: center;
+            max-width: 300px;
         }
 
         .feature-card:hover {
