@@ -85,7 +85,7 @@
             font-size: clamp(2.5rem, 5vw, 4rem);
             font-weight: 800;
             margin-bottom: 1.5rem;
-            background: linear-gradient(135deg, #ffffff, #00d4ff);
+            background: linear-gradient(135deg, #ffffff, #960Fd9);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
@@ -161,47 +161,31 @@
             width: 93px;
         }
 
-        /* Trading Video Section --- OLD
-        .trading-showcase {
-            padding: 6rem 2rem;
-            background: linear-gradient(180deg, #1e293b 0%, #0f172a 100%);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .trading-video {
-            max-width: 800px;
-            width: 100%;
-            height: 400px;
-            background: #000;
-            border-radius: 20px;
-            position: relative;
-            overflow: hidden;
-            border: 2px solid rgba(255, 255, 255, 0.1);
-        }
-
-        .video-placeholder {
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(135deg, #1a1a1a, #2a2a2a);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #666;
-            font-size: 1.2rem;
-        } */
-
         /******************** NEW VIDEO EFFECTS ATTEMPT ******************/
 
         /* Trading Video Section */
 .trading-showcase {
-    padding: 6rem 2rem;
-    background: linear-gradient(180deg, #1e293b 0%, #0f172a 100%);
+    padding: 4rem 2rem;
+    background: linear-gradient(180deg, #1e293b 0%, #230448 50%, #190045 80%, #0f172a 100%);
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     position: relative;
+}
+
+.trading-title {
+    margin-bottom: 2rem;
+}
+
+.trading-title h1{
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    font-weight: 800;
+    margin-bottom: 1.5rem;
+    background: linear-gradient(90deg, #9300AD, #8000ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
 }
 
 .trading-video {
@@ -1142,6 +1126,9 @@
 
     <!-- Trading Video Showcase -->
     <section class="trading-showcase">
+        <div class="trading-title">
+
+        </div>
         <div class="trading-video">
             <div class="ambient-glow"></div>
             <div class="fluid-frame">
@@ -1459,11 +1446,11 @@
             document.querySelectorAll('.tab-button').forEach(button => {
                 button.addEventListener('click', function() {
                     const targetTab = this.getAttribute('data-tab');
-                    
+
                     // Remove active class from all buttons and contents
                     document.querySelectorAll('.tab-button').forEach(btn => btn.classList.remove('active'));
                     document.querySelectorAll('.tab-content').forEach(content => content.classList.remove('active'));
-                    
+
                     // Add active class to clicked button and corresponding content
                     this.classList.add('active');
                     document.getElementById(targetTab).classList.add('active');
