@@ -530,7 +530,7 @@
             font-size: 2.5rem;
             font-weight: 700;
             margin-bottom: 1rem;
-            background: linear-gradient(135deg, #ffffff, #00d4ff);
+            background: linear-gradient(135deg, #ffffff, #960fd9);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
@@ -566,7 +566,7 @@
         .metric-value-tab {
             font-size: 2.5rem;
             font-weight: 700;
-            background: linear-gradient(135deg, #00d4ff, #9333ea);
+            background: linear-gradient(135deg, #90f, #91cfff);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
@@ -651,21 +651,28 @@
             position: relative;
         }
 
-        .podium-step.first {
+        .podium-step.gold{
             width: 80px;
             height: 120px;
-            background: linear-gradient(135deg, #00d4ff, #0ea5e9);
+            background: linear-gradient(135deg, #f5cd05, #998208);
         }
 
-        .podium-step.second {
-            width: 80px;
-            height: 100px;
-        }
-
-        .podium-step.third {
+        .podium-step.silver {
             width: 80px;
             height: 80px;
             background: linear-gradient(135deg, #94a3b8, #64748b);
+        }
+
+        .podium-step.bronze {
+            width: 80px;
+            height: 40px;
+            background: linear-gradient(135deg, #db6c2b, #673208);
+        }
+
+        .podium-step.platinum {
+            width: 80px;
+            height: 140px;
+            background: linear-gradient(135deg, #7c3aed, #a855f7);
         }
 
         .tier-label {
@@ -1169,8 +1176,8 @@
                             <div class="metric-label-tab">Uptime</div>
                         </div>
                         <div class="metric-tab">
-                            <div class="metric-value-tab">24/7</div>
-                            <div class="metric-label-tab">Market Access</div>
+                            <div class="metric-value-tab">0-Slot</div>
+                            <div class="metric-label-tab">Fastest on Solana</div>
                         </div>
                     </div>
                 </div>
@@ -1194,16 +1201,20 @@
 
                     <div class="podium-container">
                         <div class="podium-tier">
+                            <div class="tier-label">Bronze</div>
+                            <div class="podium-step bronze">3</div>
+                        </div>
+                        <div class="podium-tier">
                             <div class="tier-label">Silver</div>
-                            <div class="podium-step third">3</div>
+                            <div class="podium-step silver">3</div>
                         </div>
                         <div class="podium-tier">
                             <div class="tier-label">Gold</div>
-                            <div class="podium-step first">1</div>
+                            <div class="podium-step gold">1</div>
                         </div>
                         <div class="podium-tier">
                             <div class="tier-label">Platinum</div>
-                            <div class="podium-step second">2</div>
+                            <div class="podium-step platinum">2</div>
                         </div>
                     </div>
                 </div>
