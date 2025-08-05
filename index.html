@@ -1131,6 +1131,29 @@
                 grid-template-columns: 1fr;
             }
         }
+
+        .floating-trade-btn {
+              position: fixed;
+              bottom: 24px;
+              right: 24px;
+              background-color: #00FFD1; /* Bright cyan or neon green */
+              color: #000; /* High contrast text */
+              padding: 14px 24px;
+              border-radius: 999px;
+              font-weight: 700;
+              font-size: 1rem;
+              text-decoration: none;
+              box-shadow: 0 8px 20px rgba(0, 255, 209, 0.3);
+              transition: all 0.3s ease;
+              z-index: 999;
+              display: none;
+        }
+
+        .floating-trade-btn:hover {
+              background-color: #00e6ba;
+              transform: scale(1.05);
+              box-shadow: 0 10px 24px rgba(0, 255, 209, 0.5);
+        }
     </style>
 </head>
 <body>
@@ -1393,6 +1416,8 @@
                 <p>&copy; 2025 CHRONOS. All rights reserved.</p>
             </div>
         </div>
+        <a href="#trading" class="floating-trade-btn">Start Trading</a>
+
     </footer>
 
     <script>
@@ -1433,11 +1458,11 @@
             });
 	    // Sticky Header
             window.addEventListener('scroll', function() {
-                const header = document.querySelector('.header');
+                const btn = document.querySelector('.floating-trade-btn');
                 if (window.scrollY > 100) {
-                    header.style.background = 'rgba(10, 10, 10, 0.98)';
+                    btn.style.display = 'block'; // show
                 } else {
-                    header.style.background = 'rgba(10, 10, 10, 0.95)';
+                    btn.style.display = 'none'; // show
                 }
             });
         });
