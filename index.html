@@ -110,7 +110,7 @@
             color: white;
 
             padding: 1rem 2rem;
-            border-radius: 50px;
+            border-radius: 20px;
             text-decoration: none;
             font-weight: 600;
             transition: all 0.3s ease;
@@ -225,7 +225,6 @@
     justify-content: center;
     color: #666;
     font-size: 1.2rem;
-    border-radius: 18px; /* Slightly smaller to account for the border */
     position: relative;
     z-index: 15;
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
@@ -568,7 +567,7 @@
 
         .metric-tab {
             background: rgba(255, 255, 255, 0.05);
-            border-radius: 16px;
+            border-radius: 2px;
             padding: 2rem;
             border: 1px solid rgba(255, 255, 255, 0.1);
             transition: all 0.3s ease;
@@ -813,12 +812,23 @@
             width:100vw;
         }
 
-        .section-title {
+        .features-section-title {
             font-size: 2.5rem;
             font-weight: 700;
             text-align: center;
             margin-bottom: 1rem;
-            background: linear-gradient(135deg, #ffffff, #00d4ff);
+            background: linear-gradient(135deg, #00d4ff, #9333ea);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .protection-section-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 1rem;
+            background: linear-gradient(135deg, #E893FA, #9333ea);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
@@ -841,8 +851,8 @@
         .feature-card {
             background: rgba(255, 255, 255, 0.05);
             border: 1px solid rgba(255, 255, 255, 0.1);
-            border-radius: 16px;
-            padding: 2rem;
+            border-radius: 4px;
+            padding: 1.5rem;
             transition: all 0.3s ease;
             backdrop-filter: blur(10px);
             align-content: center;
@@ -864,12 +874,12 @@
             width: 200px;
             height: 200px;
             background: linear-gradient(135deg, #00d4ff, #9333ea);
-            border-radius: 12px;
+            border-radius: 1px;
             display: flex;
             align-items: center;
             justify-content: center;
             margin-bottom: 1.5rem;
-            margin-left: 1rem;
+            margin-left: 20%;
             font-size: 1.5rem;
         }
 
@@ -944,7 +954,7 @@
 
         .protection-item {
             background: rgba(255, 255, 255, 0.03);
-            border-radius: 20px;
+            border-radius: 2px;
             padding: 2.5rem;
             border: 1px solid rgba(255, 255, 255, 0.08);
             transition: all 0.3s ease;
@@ -1339,11 +1349,6 @@
                 <div class="protection-item">
                     <h3>Authentic Discussions with Community Leaders</h3>
                     <p>Consistently admiring, unwavering, and evolving</p>
-                </div>
-
-                <div class="protection-item">
-                    <h3>Custom RPC Infrastructure</h3>
-                    <p>1x-ms transaction latency</p>
                 </div>
 
                 <div class="protection-item">
