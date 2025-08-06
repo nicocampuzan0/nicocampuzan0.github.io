@@ -877,16 +877,21 @@
 
         .features-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: repeat(5, auto);/*repeat(auto-fit, minmax(300px, 1fr));*/
             gap: 2rem;
             margin-bottom: 4rem;
             justify-items: center;
+            align-items: center;
         }
 
         @media (max-width: 1040px) {
              .features-grid {
                 grid-template-columns: 1fr;
             }
+
+             .feature-arrow {
+                transform: rotate(90deg);
+             }
         }
 
 
