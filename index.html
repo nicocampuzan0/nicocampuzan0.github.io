@@ -1564,6 +1564,19 @@
                 }
             });
         });
+
+        // Resume demo video on 50% visibility if media throttling enabled
+        const vid = document.getElementById('demoVideo');
+
+        new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                if (vid.paused) {
+                    vid.play().catch(() => {});
+                }
+            }
+        });
+        }, { threshold: 0.5 }).observe(vid);
     </script>
 </body>
 </html>
