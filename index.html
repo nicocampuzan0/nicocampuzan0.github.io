@@ -222,6 +222,13 @@
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
 }
 
+.trading-video video {
+    display: block;            /* remove inline spacing quirks */
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+}
+
 /* Fluid Frame Effects */
 .fluid-frame {
     position: absolute;
@@ -445,6 +452,10 @@
     .trading-video {
         height: 300px;
         max-width: 90%;
+    }
+
+    .trading-video video {
+        height: 300px;
     }
 
     .fluid-frame {
@@ -1305,7 +1316,7 @@
             <div class="particle particle-2"></div>
             <div class="particle particle-3"></div>
             <div class="video-placeholder">
-                <video width="100%" height="100%" autoplay loop muted>
+                <video autoplay loop muted playsinline>
                     <source src="assets/images/landing/demo_video.mp4" type="video/mp4" />
                     Your browser does not support the video tag.
                 </video>
@@ -1553,6 +1564,19 @@
                 }
             });
         });
+
+        // Resume demo video on 50% visibility if media throttling enabled
+        const vid = document.getElementById('demoVideo');
+
+        new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                if (vid.paused) {
+                    vid.play().catch(() => {});
+                }
+            }
+        });
+        }, { threshold: 0.5 }).observe(vid);
     </script>
 </body>
 </html>
