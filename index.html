@@ -199,11 +199,11 @@
 .trading-video {
     max-width: 800px;
     width: 100%;
-    height: 400px;
+    aspect-ratio: 53 / 26;  /* keep proportional height */
     background: #000;
     border-radius: 20px;
     position: relative;
-    overflow: visible; /* Changed from hidden to show the fluid effects */
+    overflow: visible; /* or hidden if you want no overflow */
     border: 2px solid rgba(255, 255, 255, 0.1);
     z-index: 10;
 }
@@ -223,11 +223,12 @@
 }
 
 .trading-video video {
-    display: block;            /* remove inline spacing quirks */
+    display: block;
     width: 100%;
-    height: 400px;
-    object-fit: cover;
+    height: 100%;
+    object-fit: contain; /* or cover, depending on your preference */
 }
+
 
 /* Fluid Frame Effects */
 .fluid-frame {
@@ -450,13 +451,9 @@
 /* Responsive adjustments */
 @media (max-width: 768px) {
     .trading-video {
-        height: 300px;
         max-width: 90%;
     }
 
-    .trading-video video {
-        height: 300px;
-    }
 
     .fluid-frame {
         top: -15px;
